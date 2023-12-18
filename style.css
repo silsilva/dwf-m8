@@ -1,0 +1,150 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+:root {
+  --white: #ffffff;
+  --of-white: #e5e5e5;
+  --transp-white-1: rgba(255, 255, 255, 0.25);
+  --transp-white-2: rgba(255, 255, 255, 0.1);
+  --blue-1: #62b8f5;
+  --blue-2: #4475ef;
+  --shadow: rgba(3, 46, 87, 0.2);
+}
+
+button {
+  height: 3em;
+  width: 100%;
+  border-radius: 0.6em;
+  background: var(--of-white);
+}
+#button {
+  width: 50%;
+  margin-top: 10px;
+}
+input {
+  height: 3em;
+  width: 100%;
+  border-radius: 0.6em;
+  background: var(--of-white);
+}
+body {
+  background: linear-gradient(135deg, var(--blue-1), var(--blue-2));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+h2 {
+  margin-top: 20px;
+}
+.contenedor {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  height: 93vh;
+  padding-bottom: 30%;
+}
+.contenedor4 {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  height: 95vh;
+}
+.contenedor5 {
+  display: flex;
+
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.contenedor2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+  align-items: center;
+}
+.contenedor3 {
+  width: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+  height: 100vh;
+  padding-bottom: 10%;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+
+  width: 100vw;
+  background-color: #e5e5e5;
+}
+
+ul {
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  gap: 20px;
+}
+
+i {
+  color: #ffffff;
+}
+#header {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 1rem;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #1c1c1c;
+  padding: 2rem;
+}
+
+p {
+  color: goldenrod;
+  text-align: center;
+}
+#link {
+  color: #4475ef;
+  text-decoration: underline;
+}
+#menu-button {
+  width: 60px;
+}
+
+#homeb {
+  margin-top: 20%;
+}
+#card-text {
+  display: flex;
+  justify-content: space-between;
+}
+#img-card {
+  width: 100%;
+  height: 165px;
+}
+#card {
+  background-color: #4475ef;
+  width: 90%;
+  max-width: 310px;
+  margin-bottom: 10px;
+  border-radius: 10%;
+  padding: 15px;
+}
+form {
+  margin-top: 15px;
+  min-width: 20%;
+  max-width: 60%;
+}
