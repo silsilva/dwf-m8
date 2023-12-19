@@ -12,13 +12,12 @@ export default function Header() {
   const navigate = useNavigate();
 
   const toggleOffcanvas = () => {
+    console.log("HICIERON CLICK");
+
     setOffcanvas(!offcanvas);
   };
-
-  const handleLogOut = () => {
-    localStorage.removeItem("pet-finder");
-    navigate("/");
-    navigate(0);
+  const toggleOffcanvas2 = () => {
+    console.log("HICIERON CLICK en la x");
   };
 
   return (
@@ -44,48 +43,56 @@ export default function Header() {
           <i>MENU</i>
         </button>
       </nav>
+      {offcanvas ? (
+        <div
+          className={`${offcanvas ? "translate-x-0" : "translate-x-full"} `}
+          id="header"
+        >
+          <button onClick={toggleOffcanvas2} type="button">
+            <img
+              src={logo}
+              width={"60px"}
+              alt="Pet Finder App Logo"
+              onClick={() => {
+                setOffcanvas(false);
+              }}
+            />
+          </button>
 
-      <div
-        className={`${offcanvas ? "translate-x-0" : "translate-x-full"} `}
-        id="header"
-      >
-        <button onClick={toggleOffcanvas} type="button">
-          <i>x</i>
-        </button>
+          <ul>
+            <li>
+              <Link to="/profile" onClick={toggleOffcanvas}>
+                Mi perfil
+              </Link>
+            </li>
+            <li>
+              <Link to="/lost-pets" onClick={toggleOffcanvas}>
+                Mascotas cerca
+              </Link>
+            </li>
+            <li>
+              <Link to="/create-pet" onClick={toggleOffcanvas}>
+                Reportar mascota
+              </Link>
+            </li>
+            <li>
+              <Link to="/my-pets" onClick={toggleOffcanvas}>
+                Mis mascotas
+              </Link>
+            </li>
+          </ul>
 
-        <ul>
-          <li>
-            <Link to="/profile" onClick={toggleOffcanvas}>
-              Mi perfil
-            </Link>
-          </li>
-          <li>
-            <Link to="/lost-pets" onClick={toggleOffcanvas}>
-              Mascotas cerca
-            </Link>
-          </li>
-          <li>
-            <Link to="/create-pet" onClick={toggleOffcanvas}>
-              Reportar mascota
-            </Link>
-          </li>
-          <li>
-            <Link to="/my-pets" onClick={toggleOffcanvas}>
-              Mis mascotas
-            </Link>
-          </li>
-        </ul>
-
-        {userProfileInfo ? (
-          <p id="link">{userProfileInfo.email}</p>
-        ) : (
-          <p id="link">
-            <Link to="/login" onClick={toggleOffcanvas}>
-              iniciar sesión
-            </Link>
-          </p>
-        )}
-      </div>
+          {userProfileInfo ? (
+            <p id="link">{userProfileInfo.email}</p>
+          ) : (
+            <p id="link">
+              <Link to="/login" onClick={toggleOffcanvas}>
+                iniciar sesión
+              </Link>
+            </p>
+          )}
+        </div>
+      ) : null}
     </header>
   );
 }
